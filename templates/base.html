@@ -1,7 +1,17 @@
-<header>
-    <a href="{% url 'home' %}">Página Inicial</a>
-    <a href="{% url 'sobre' %}">Sobre</a>
-</header>
+{% load static %}
+<html>
+    <head><title>Postagens</title></head>
+    <body>
+        <header>
+            <a href="{% url 'home' %}"> pagina inicial </a> |
+            <a href="{% url 'listagem' %}"> Postagens </a> |
+            <a href ="{% url 'post_new' %}">Novo Post</a> |
+            <a href="{% url 'sobre' %}"> Sobre </a>
 
-{% block content %}
-{% endblock content %}            
+        </header>
+        <div>
+            {%block content %}
+            {% endblock content %}
+        </div>
+    </body>
+</html>

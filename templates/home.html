@@ -1,4 +1,9 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1>Hello Word com Template!</h1>
+    {% for post in lista %}
+        <div class="post-">
+            <h2><a href="">{ {post.title } }</a></h2>
+            <p>{ { post.body } }</p>
+        </div>
+        {% endfor %}
 {% endblock content %}       
